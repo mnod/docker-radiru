@@ -1,10 +1,13 @@
-usage
---------
+# summay
 
-sudo make
+## build
 
-then
+    docker build -t rec_radio .
 
-sudo /usr/bin/docker run --rm -v /media/recorder:/media/recorder rec_radio <station> <minitue> [comment]
+## run
+
+    docker run --rm -v /media/recorder:/media/recorder rec_radio <station> <minute> [comment]
 
 station: NHKR1 | NHKR2 | NHK-FM
+You can ommit [comment].
+The file name will be YYYYMMDD_<station>[_<comment>].m4a
